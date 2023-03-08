@@ -1,0 +1,124 @@
+$height-menu-item: 45px;
+$height-menu-title: 30px;
+$height-menu-separator: 5px;
+
+$nbr-title-orga: 1;
+$nbr-separator-orga: 1;
+$nbr-orga: 3;
+
+$nbr-title-plan: 0;
+$nbr-separator-plan: 1;
+$nbr-plan: 2;
+
+header {
+  background-color: $cp;
+  color: $cw;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    width: max-content;
+
+    .solo:hover {
+      height: $height-menu-item !important;
+    }
+
+    .menu-container {
+      height: $height-menu-item;
+      position: relative;
+
+      &:hover {
+        background-color: $cs;
+
+        .separator {
+          height: $height-menu-separator;
+          background-color: $cw;
+          width: 100%;
+          box-sizing: border-box;
+          border-left: 10px solid $cs;
+          border-right: 10px solid $cs;
+        }
+
+        & > .sub-menu {
+          .menu-title {
+            height: $height-menu-title;
+            border-left: 10px solid $cs;
+            border-right: 10px solid $cs;
+            box-sizing: border-box;
+            width: 100%;
+            background-color: $cw;
+            color: $cp;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+
+            div {
+              width: fit-content;
+              height: fit-content;
+            }
+          }
+        }
+
+        &,
+        .orga {
+          height: $height-menu-item * $nbr-orga + $height-menu-title *
+            $nbr-title-orga + $height-menu-separator * $nbr-separator-orga;
+        }
+        &,
+        .plan {
+          height: $height-menu-item * $nbr-plan + $height-menu-title *
+            $nbr-title-plan + $height-menu-separator * $nbr-separator-plan;
+        }
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .unclickable {
+        cursor: default;
+      }
+
+      .menu-item {
+        height: $height-menu-item;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+
+        .menu-text {
+          font-weight: bold;
+        }
+      }
+
+      .sub-menu {
+        position: absolute;
+        top: $height-menu-item;
+        background-color: $cs;
+        width: 100%;
+        z-index: 1;
+
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s;
+
+        & > .menu-item {
+          &:hover {
+            background-color: $cp;
+          }
+        }
+      }
+    }
+  }
+}

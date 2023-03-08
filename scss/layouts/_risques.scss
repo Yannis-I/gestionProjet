@@ -1,0 +1,65 @@
+$ci4: rgb(255, 58, 58);
+$ci3: rgb(255, 151, 66);
+$ci2: rgb(255, 224, 49);
+$ci1: rgb(197, 255, 61);
+
+.risk-table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+
+  .risque {
+    width: 25%;
+  }
+
+  .stats {
+    width: 5%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .gestion {
+    width: 50%;
+  }
+
+  th {
+    background-color: $cpl;
+  }
+
+  th,
+  td {
+    border: 1px solid $cs;
+    padding: 5px;
+  }
+
+  .p1 {
+    background-color: $ci1;
+  }
+  .p2 {
+    background-color: $ci2;
+  }
+  .p3 {
+    background-color: $ci3;
+  }
+  .p4 {
+    background-color: $ci4;
+  }
+}
+
+.legende {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $cpl;
+  width: fit-content;
+  padding: 5px;
+  margin-top: 30px;
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+
+    .value {
+      margin-left: 5px;
+    }
+  }
+}

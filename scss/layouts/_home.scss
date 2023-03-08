@@ -1,0 +1,13 @@
+.description {
+  display: flex;
+  flex-direction: row;
+
+  section {
+    padding-right: 20px;
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+$color-red: rgba(237, 67, 83, 0.8);
+$color-green: rgba(15, 172, 113, 0.8);
+$color-yellow: rgba(254, 212, 64, 0.8);
+$color-blue: rgba(60, 171, 205, 0.8);
+
+.estimation {
+  margin: 50px auto;
+  border-collapse: collapse;
+
+  thead {
+    background-color: $cgd;
+    color: $cw;
+  }
+
+  .red {
+    background-color: $color-red;
+  }
+  .blue {
+    background-color: $color-blue;
+  }
+  .yellow {
+    background-color: $color-yellow;
+  }
+  .green {
+    background-color: $color-green;
+  }
+
+  text-align: center;
+
+  .task {
+    text-align: left;
+  }
+  .pert {
+    font-weight: bold;
+  }
+
+  th,
+  td {
+    padding: 4px 10px;
+    border-bottom: 3px solid white;
+  }
+}
